@@ -1,0 +1,28 @@
+.gallery-img {
+    width: 100%; /* largura 100%*/
+    height: 100%;
+    overflow: hidden;
+    max-width: 22rem;
+    max-height: 30rem;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: auto;
+    align-items: auto;
+    border: 0.25rem solid #6b63ffbc; /* cor da borda*/
+ 
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+    max-width: 22rem;
+    max-height: 22rem;
+ 
+}
+
+.gallery-img img:hover {
+    transform: translate(-4%, 6%) scale(1.2) rotate(5deg); /* Efeito da imagem*/
+}
+

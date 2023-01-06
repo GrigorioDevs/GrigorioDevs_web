@@ -1,0 +1,44 @@
+.main-bg {
+    /*background-image: url('../img/main-3bg.svg');*/
+    background: white;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    display: grid;
+}
+
+.white-bg { /*menu*/
+   /* background-image: url('../img/main-2bg.svg'); imagem no fundo do menu */
+   /*background:url('https://capsule-render.vercel.app/api?type=waving&color===#000000&height=180&section=header&fontSize=30&fontColor=fff&animation=twinkling&fontAlignY=35'); /* menu preto */
+   color: white; /* cor das letras do menu */
+   background: black;
+}
+
+
+.main-content {
+    max-width: 120rem; /*largura maxima do site */
+    margin: 0 auto; /* o conteudo fica alinhado no meio */
+}
+
+
+.section {
+    min-height: 100vh; /* altura minima de 100vh*/
+}
+
+.menu-spacing {
+    height: 65px;
+}
+
+.main2-bg {
+    /*background-image: url('../img/p1.svg');*/
+    background-size: cover;
+    background: black;
+    background-position: center center;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%; 
+}
+
+

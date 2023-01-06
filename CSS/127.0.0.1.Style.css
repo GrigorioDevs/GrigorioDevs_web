@@ -1,0 +1,245 @@
+
+.intro-content {
+    display: grid; /* faz com que o elemento vire um grid */
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh; /* tamanho da altura da classe */
+    /*top: -8rem;*/
+}
+
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+
+.intro-img img {
+    max-width: 100%; /* 100% da largura da imagem */
+    height: auto; /* largura auto */
+}
+
+.top3-content { /*alinhando o elemento texto */
+    max-width: 80rem;
+    min-height: 100vh; /* altura mininma de 100vh */
+    display: flex;
+    flex-flow: column; /* alinha o elemento em coluna */
+    flex-wrap: nowrap; /* não permite o elemento quebrar linha ao diminuir a tela*/
+    justify-content: center; /*alinha o elemento no centro */
+    text-align: center; /* alinha o texto no centro */
+
+}
+
+
+.grid-one-content { /*alinhando o elemento texto */
+    min-height: 100vh; /* altura */
+    display: flex;
+    flex-flow: column wrap; /*alinha o elemento em coluna, pode estar errado essa deifinição */
+    justify-content: center; /*alinha o elemento no centro */
+    /* text-align: center;  alinha o texto no centro */
+}
+
+.grid-main-heading {
+    margin-bottom: 0rem; /* o espaço entre o h2 e a descrição */
+    padding-top: 5rem;
+}
+
+.grid-description {
+    padding-bottom: 4rem; /* espaço entre a descrição e os títulos */
+}
+
+.grid {
+    display: grid; /* torna o display grid */
+    grid-template-columns: repeat(3, 1fr); /* a coluna ira ter 3 colunas com o tamaho de 1 rf */
+    gap: var(--gap);
+    counter-reset: grid-counter;
+    padding-left: 5rem; /* move 50px da esquerda os pseudo elementos */
+}
+
+.grid h3 {
+    font-size: 2rem;
+    position: relative; /* cria uma div, ou quadrado em volta do elemento */
+    padding-left: 5rem; /* move o h3 50px para a esquera */
+    padding-bottom: 2.5rem; /* cria uma espaço na margem de baixo de 30px dos pseudo elementos  */
+}
+
+.grid h3::before { /* before antes do meu titulo */
+    counter-increment: grid-counter; /* aonde vai ser o contador, é um pseudo-elemento*/
+    content: counter(grid-counter); /* quem é o contador */
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem; /* sobe os número que são pseudo-elementos*/
+    left: -2rem; /* o elemento fica menos -20px para esquerda */
+    transform: rotate(5deg); /* rotaciona o elemento em 5 graus*/
+
+}
+
+.git {
+    background-position: cover;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    position: fixed;
+    left: 5px;
+    width: 3%;
+    cursor: pointer; /*efeito no botão */
+    padding-left: 10px; /* Espaço lateral da esquerda */
+    transition: 0.5ms;
+    transition-property:color;
+    
+}
+
+.t2 {
+    font-size: 3rem;
+}
+
+
+
+.image {
+    background-image: url('../img/gu.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#contact {
+ top: -8rem;
+}
+
+.footer {
+    text-align: center; /* alinha o texto no centro*/
+    font-size: 2.0rem; /* tamanho da fonte */
+    background: black; /* cor do fundo do rodapé */
+  }
+  
+  .footer {
+    color: white; /*cor das letras do rodapé*/
+  }
+  
+  .heart {
+    color:  #51b3ec; /* cor do coração que esta em span*/
+  }
+  
+  .footer p {
+    margin: 0; /* margin do topo equivale a 0, então ele vai ficar mais proximo da linha do ultimo backuground*/
+    padding: 3rem; /* o elemento fica 30px mais proxímo da barra de cima do backuground*/
+  } 
+
+  .close-menu {
+    display: none;
+  }
+
+  @media  (max-width: 800px) {
+    .intro-content, .grid {
+        grid-template-columns: 1fr; /* se a classe intro-content e grid diminuir menos que 800px a view
+        quebra os elementos 1fr(1 por coluna) */
+    }
+
+    .gallery-img {
+        width: 100%; /*largura de 100%*/
+        max-width: 100%; /* quando estiver em mobile a largura ira ficar em 100% do view porte */
+        max-height: 100%; /* quando estiver em mobile a altura ira ficar em 100% */
+    }
+
+    .gallery-img img {
+        width: 100%; /* as imagens possuem 100% de largura em mobile*/
+    }
+
+    .grid-one-content {
+        display: block; /* quando estiver em mobile vira display block*/
+    }
+
+    .menu {
+        bottom: 0; /* o menu fica */
+        text-align: center; /* alinha o menu no meio*/
+        
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column; /* transforma os elementos em colunas*/ 
+    }
+
+    .menu h1 a {
+        height: 100vh; /*altura de 100% do vh, título do grigorio devs*/
+        justify-content: center;
+    }
+
+    .menu {
+        display: none; /* não aparece o input */
+    }
+
+    .close-menu {
+        position: fixed; /* fixar o menu */
+        z-index: 2; /* sobrepõe o index 1 */
+        top: 0; /* justificado ao topo */
+        left: 0; /*justificado a direita*/
+    }
+
+    .close-menu-label::after {
+        content: '⚏'; /*pseudo elemento*/
+        position: fixed; /* fixar o menu */
+        z-index: 2; /* sobrepõe o index 1 */
+        top: 2rem; /* distancia do topo de 200*/
+        right: 2rem; /* distancia da lateral direita de 200px*/
+        font-size: 3rem; /* tamanho da fonte */
+        color: white;
+        background: black;
+        line-height: 3rem; /*altura do elemento*/
+        width: 3rem; /*largura do elemento*/
+        height: 3rem;
+        text-align: center; /* alinha o elemento no meio*/
+        padding: 1rem; /* aumenta o elemento em 100px*/
+        cursor: pointer; /* torna tickavel o menu*/
+        border-radius: 100%;
+        border: 0.25rem solid #6b63ffbc; /* cor da borda*/
+    }
+
+    .close-menu:checked ~ .menu {
+        display: block; /*quando close menu for acionado tornar o menu display block*/
+    }
+
+    .close-menu:checked ~ .close-menu-label::after {
+        content: 'x';
+    } /* quando o input for checado o close menu recebe um novo pseudo elemento*/
+
+    .menu-spacing {
+        display: none; /* quando a media tiver ativa, desativara a classe */
+    }
+
+    .back-to-top {
+        position: fixed; /* fixa a posição do elemento */
+        bottom: 2rem; /* 20px do chão para cima */
+        right: 2rem; /* 20px da direita para esquerda*/
+        background: black;
+        width: 5rem; /* largura*/
+        height: 5rem; /*altura*/
+        display: flex; /* torna o elemento flexivel e faz com que ele aceite background */
+        justify-content: center; /* alinha no centro */
+        align-items: center; /* alinha no centro */
+        border-radius: 50%; /* torna o background redondo*/
+        color: white;
+        border: 0.25rem solid #6b63ffbc; /* cor da borda*/
+        transform: rotate(-90deg);
+    }
+
+
+  }
+
+
+  .back-to-top {
+    position: fixed; /* fixa a posição do elemento */
+    bottom: 2rem; /* 20px do chão para cima */
+    right: 2rem; /* 20px da direita para esquerda*/
+    background: black;
+    width: 5rem; /* largura*/
+    height: 5rem; /*altura*/
+    display: flex; /* torna o elemento flexivel e faz com que ele aceite background */
+    justify-content: center; /* alinha no centro */
+    align-items: center; /* alinha no centro */
+    border-radius: 50%; /* torna o background redondo*/
+    color: white;
+    border: 0.25rem solid #6b63ffbc; /* cor da borda*/
+    transform: rotate(-90deg);
+}

@@ -1,0 +1,97 @@
+.sidebar { /* cria a aba lateral */
+    position: fixed; /*fixa a area lateral*/
+    width: 250px; /*largura da lateral */
+    height: 92%;
+    margin-top: 100vh;
+    padding-top: -30px;
+    left: 0;
+    background: black;
+    transition: 0.5ms;
+    transition-property: left;
+}
+
+.sidebar .image { /*formata a imagem*/
+    top: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px; /*transforma a div quadrado em circulo */
+}
+
+.sidebar .t2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.tt {
+    color: black;
+}
+
+.tt2 {
+    color: black;
+}
+
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding-left: 40px; /*afasta os elementos da barra da esquerda, no grid lateral */
+    line-height: 60px; /* espaçamento entre os displa block */
+    text-decoration: none;
+    box-sizing: border-box; /* cria uma caixa invisivel */
+    transition: 0.5s; /* efeito de transição nos elementos*/
+    transition-property:background; 
+}
+
+.sidebar a:hover {
+    background: #51b3ec; /* da cor a essa caixa invisível*/
+
+}
+
+.sidebar ion-icon {
+    padding-right: 10px; /*espaço entre o elemento, menu lateral*/ 
+}
+
+label #menu { /* botão menu */
+    display: flex;
+    z-index: 1;
+    position: fixed;
+    left: 5px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer; /*efeito no botão */
+    padding-left: 10px;
+    transition: 0.5ms;
+    transition-property:color;
+    padding-top: 16px;
+}
+
+label #menu:hover {
+    color: #51b3ec;
+}
+
+#check:checked ~  .sidebar .t2 {
+    padding-right: 3rem; /* quando check for habilitado o t2 fica com padding 300px para esquerda */
+}
+
+#check:checked ~  .sidebar {
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check:checked ~ .content{
+    margin-left: 60px;  
+}
+
+#check{
+    display: none; /*some com o check box */
+}

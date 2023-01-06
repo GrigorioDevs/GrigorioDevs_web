@@ -1,0 +1,10 @@
+
+/* 1 rem equivale a 10px */
+
+:root { /* variavél */
+    --primary-color: #0A1128;
+    --white: #ffffff; 
+    --gap: 3rem; /* espaçamento de 3rem */
+    --light-gray-color: #EEEEEE; /* cor cinza */
+    --color: black;
+}

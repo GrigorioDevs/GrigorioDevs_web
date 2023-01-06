@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* desliza a pesquisa an pág */
+}
+
+body {
+    font-family: 'open Sans', sans-serif; /* Define a fonte do body */
+    font-size: 2rem; /* ele ira multiplicar 62% por 1.6 e esse resultado será o tamanho da fonte dentro do body */
+    color: white; /* cor dos textos */
+    line-height: 1.5; /*espaçamento entre linhas */
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'montserrat', sans-serif; /*Define a fonte do título */
+
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase; /*letras maiusculas */
+}
+
+h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 5rem;
+    text-transform: uppercase; /*letras maiusculas */
+}
+
+h4 {
+    font-size: 4.5rem;
+    text-transform: uppercase; /*letras maiusculas */
+}
+h5 {
+    font-size: 4rem;
+    text-transform: uppercase; /*letras maiusculas */
+}
+
+h6 {
+    font-size: 3.5rem;
+    text-transform: uppercase; /*letras maiusculas */
+}
+
+/*.git {
+    display: flex;
+    margin: 0px;
+    width: 2.6rem;
+    height: 2.5rem;
+}*/
+
+a {
+    text-decoration: none; /*tira todo os estilos da tag a */
+}
+
+p {
+    margin-bottom: 4rem ;
+}
